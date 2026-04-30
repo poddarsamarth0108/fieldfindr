@@ -1,4 +1,4 @@
-// src/App.js
+import MapView from './MapView';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -12,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/field/:id" element={<FieldDetail />} />
       </Routes>
+      <MapView />
     </BrowserRouter>
   );
 }
