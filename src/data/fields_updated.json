@@ -1,9 +1,3 @@
-export const CITIES = [
-  "Patna", "Mumbai", "Delhi", "Bengaluru",
-  "Kolkata", "Hyderabad", "Pune", "Chennai",
-  "Ahmedabad", "Jaipur", "Lucknow", "Surat"
-];
-export const FIELDS_DB =
 {
   "patna": [
     {
@@ -1822,8 +1816,4 @@ export const FIELDS_DB =
       "notes": "Beach ground. Great for evening football."
     }
   ]
-}
-export function searchFields(city) {
-  const key = city.toLowerCase().trim().replace(/\s+/g, '');
-  return FIELDS_DB[key] || null;
 }

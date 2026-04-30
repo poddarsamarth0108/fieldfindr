@@ -1,7 +1,7 @@
-// src/pages/Home.js
 import React, { useState, useMemo } from 'react';
 import Header from '../components/Header';
 import FieldCard from '../components/FieldCard';
+import MapView from '../MapView';
 import { searchFields, CITIES, FIELDS_DB } from '../data/fields';
 import styles from './Home.module.css';
 
@@ -182,8 +182,10 @@ export default function Home() {
                 {displayed.map(f => <FieldCard key={f.id} field={f} />)}
               </div>
             )}
+            <MapView grounds={displayed} key={displayed.length} />
           </>
         )}
+        
 
         {/* WELCOME STATE */}
         {!results && !notFound && (
